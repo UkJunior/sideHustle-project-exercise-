@@ -33,9 +33,9 @@ input[type="tel"] {
   border-radius: 4px;
 }
 
-input:focus {
+/* input:focus {
   width: 100%;
-}
+} */
 
 input[type="submit"] {
   background-color: #04aa4f;
