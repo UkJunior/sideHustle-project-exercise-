@@ -10,11 +10,11 @@
   <body>
       <main>
 
-    <h2>Fill in the form</h2>
+    <h2>Fill in Your BioData</h2>
     <div class="successful ">Form submitted succefully</div>
     <form action="" >
       <fieldset>
-        <legend>membership form</legend>
+        <legend>biodata form</legend>
         <label for="fullname">Fullname</label>
         <input type="text" name="fullname" id="fullname" required  class="name"/>
         <br />
@@ -23,6 +23,10 @@
         <br />
         <label for="phone">Phone Number</label>
         <input type="tel" name="phone" id="phone" required placeholder="+123..."  class="phone"/><br />
+
+        <label for="date">Date Of Birth</label>
+        <input type="date" name="birthDate" id="date" required class="date"/><br />
+
         <label for="radio">male</label>
         <input type="radio" name="sex" id="male" value="male" required  class="male"/><br />
         <label for="radio">female</label>
@@ -37,6 +41,9 @@
 const text = document.getElementsByClassName('name')[0];
      const email = document.getElementsByClassName('email')[0];
      const phone = document.getElementsByClassName('phone')[0];
+
+     const date = document.getElementsByClassName('date')[0];
+     
      const male = document.getElementsByClassName('male')[0];
      const hide = document.getElementsByClassName('successful')[0];
      const female = document.getElementsByClassName('male')[0];
@@ -45,7 +52,7 @@ const text = document.getElementsByClassName('name')[0];
       
      btn.addEventListener('click', function(event){
        event.preventDefault()
-       if(text.value != '' && email.value != '' && phone.value != ''){
+       if(text.value != '' && email.value != '' && phone.value != '' && date.value != ''){
          hide.classList.add('show')
         }
         
@@ -54,6 +61,7 @@ const text = document.getElementsByClassName('name')[0];
           text.value = ''
           email.value = ''
           phone.value = ''
+          date.value = ''
           male.value = ''
           female.value = '' 
        }, 2000)
