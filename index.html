@@ -9,26 +9,57 @@
   </head>
   <body>
       <main>
+
     <h2>Fill in the form</h2>
-    <form action="">
+    <div class="successful ">Form submitted succefully</div>
+    <form action="" >
       <fieldset>
         <legend>membership form</legend>
         <label for="fullname">Fullname</label>
-        <input type="text" name="fullname" id="fullname" required />
+        <input type="text" name="fullname" id="fullname" required  class="name"/>
         <br />
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" required placeholder="example@mail.com"/>
+        <input type="email" name="email" id="email" required placeholder="example@mail.com" class="email"/>
         <br />
         <label for="phone">Phone Number</label>
-        <input type="tel" name="phone" id="phone" required placeholder="+123..." /><br />
+        <input type="tel" name="phone" id="phone" required placeholder="+123..."  class="phone"/><br />
         <label for="radio">male</label>
-        <input type="radio" name="sex" id="male" value="male" required /><br />
+        <input type="radio" name="sex" id="male" value="male" required  class="male"/><br />
         <label for="radio">female</label>
-        <input type="radio" name="sex" id="female" value="female" required />
+        <input type="radio" name="sex" id="female" value="female" required  class="female"/>
         <br />
-        <input type="submit" value="submit"/>
+        <input type="submit" value="submit" class="btn"/>
       </fieldset>
     </form>
 </main>
   </body>
+  <script type="text/javascript">
+const text = document.getElementsByClassName('name')[0];
+     const email = document.getElementsByClassName('email')[0];
+     const phone = document.getElementsByClassName('phone')[0];
+     const male = document.getElementsByClassName('male')[0];
+     const hide = document.getElementsByClassName('successful')[0];
+     const female = document.getElementsByClassName('male')[0];
+   
+     const btn = document.getElementsByClassName('btn')[0];
+      
+     btn.addEventListener('click', function(event){
+       event.preventDefault()
+       if(text.value != '' && email.value != '' && phone.value != ''){
+         hide.classList.add('show')
+        }
+        
+        setTimeout(()=>{
+          hide.classList.remove('show')
+          text.value = ''
+          email.value = ''
+          phone.value = ''
+          male.value = ''
+          female.value = '' 
+       }, 2000)
+      })
+      
+     
+
+  </script>
 </html>

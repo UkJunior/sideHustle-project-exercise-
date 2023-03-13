@@ -16,6 +16,17 @@ main {
   background-color: white;
 }
 
+.successful {
+  display: none;
+}
+
+.successful.show{
+  display: block;
+  color: #04aa4f;
+}
+
+
+
 fieldset {
   margin-top: 1em;
   padding: 1em;
@@ -33,9 +44,9 @@ input[type="tel"] {
   border-radius: 4px;
 }
 
-/* input:focus {
-  width: 100%;
-} */
+.input {
+  /* background-color: blue; */
+}
 
 input[type="submit"] {
   background-color: #04aa4f;
